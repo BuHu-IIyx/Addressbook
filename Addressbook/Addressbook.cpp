@@ -167,3 +167,33 @@ void Addressbook::loadBook()
 	}
 	finC.close();
 }
+//void Addressbook::findPerson()
+//{
+//	char flag = 'y';
+//
+//	while (flag == 'y')
+//	{	
+//		string temp;
+//		cout << "Введите имя для поиска:\n";
+//		cin >> temp;
+//		int count = 0;
+//		for (auto const t : book)
+//		{
+//			if (t.first.find(temp) > 0)
+//			{
+//				count++;
+//				cout << t.second->getPerson() << endl;
+//			}
+//		}
+//		if (count == 0)
+//		{
+//			cout << "Результаты не найдены.";
+//		}		
+//		cout << "Повторить поиск? (y/n)\n";
+//		cin >> flag;
+//	}
+//}
+void Addressbook::delPerson()
+{
+
+}
