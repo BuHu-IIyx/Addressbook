@@ -19,6 +19,7 @@ public:
 	Person(string, string, string, char);
 	virtual void setPerson(string, string, string, char);
 	virtual string getPerson();
+	string getName();
 	virtual char getStatus() = 0;
 	virtual ~Person() {};
 };

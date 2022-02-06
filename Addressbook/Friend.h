@@ -10,7 +10,6 @@ public:
     Friend(string, string, string, string);
     void setPerson(string, string, string, string);
     string getPerson() override;
-    char getStatus() override;
-    ~Friend() override {};
+    char getStatus() override; 
 };
 

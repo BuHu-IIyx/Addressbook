@@ -4,10 +4,11 @@
 int main()
 {
     system("chcp 1251");
-    Addressbook address;
-    address.start();
-    address.addPerson();
-    address.showAll();
-    address.saveBook();
+    Addressbook* address = new Addressbook;    
+    address->start();
+
+    //address.addPerson();
+    //address.showAll();
+    //address.saveBook();
     return 1;
 }

@@ -26,3 +26,9 @@ string Person::getPerson()
 	ss << lastName << " " << name << " - " << phone;
 	return ss.str();
 }
+string Person::getName()
+{
+	std::stringstream ss;
+	ss << lastName << " " << name;
+	return ss.str();
+}

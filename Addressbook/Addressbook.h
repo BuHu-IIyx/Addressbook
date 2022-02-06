@@ -16,17 +16,19 @@ private:
 	std::map<string, Person*>::iterator bookIter;
 	string pathF;
 	string pathC;
-	unsigned int mainMenu();
+	
 	void selectAction(unsigned int);
 public:
 	Addressbook();
-	//void start();
+	unsigned int mainMenu();
+	void start();
 	void loadBook();
 	void loadFriends();
 	void loadColleagues();
 	void showAll();
 	void addPerson(char);
-	void addPerson(Friend);
+	//template <class T>
+	void addPerson(Person*);
 	//void addFriend(Friend);
 	//void addColleague(Colleague);
 	void delPerson();

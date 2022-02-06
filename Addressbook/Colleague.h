@@ -13,6 +13,5 @@ public:
     void setPerson(string, string, string, string, string, string);
     string getPerson() override;
     char getStatus() override;
-    ~Colleague() override {};
 };
 

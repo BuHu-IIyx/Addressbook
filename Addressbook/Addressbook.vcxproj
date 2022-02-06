@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Addressbook.cpp" />
+    <ClCompile Include="Fabric.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Colleague.cpp" />
     <ClCompile Include="Friend.cpp" />
