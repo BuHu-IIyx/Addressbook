@@ -1,8 +1,8 @@
 #include "Friend.h"
 
-Friend::Friend() : Person()
+Friend::Friend()/* : Person()*/
 {
-    nickname = "";
+    //nickname = "";
 }
 Friend::Friend(string name, string lastName, string phone, string nickname) 
     : Person(name, lastName, phone, 'F')

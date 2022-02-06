@@ -1,10 +1,10 @@
 #include "Colleague.h"
 
-Colleague::Colleague():Person()
+Colleague::Colleague()/*:Person()*/
 {
-    position = "";
-    department = "";
-    organization = "";
+    //position = "";
+    //department = "";
+    //organization = "";
 }
 Colleague::Colleague(string name, string lastName, string phone, 
     string position, string department, string organization) : Person(name, lastName, phone, 'C')

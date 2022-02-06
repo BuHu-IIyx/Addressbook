@@ -1,10 +1,10 @@
 #include "Person.h"
 Person::Person()
 {
-	Person::name = "";
-	Person::lastName = "";
-	Person::phone = "";
-	Person::status = 'N';
+	//Person::name = "";
+	//Person::lastName = "";
+	//Person::phone = "";
+	//Person::status = 'N';
 }
 Person::Person(string name, string lastName, string phone, char status = 'N')
 {

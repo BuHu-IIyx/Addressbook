@@ -1,5 +1,7 @@
 #pragma once
 #include <list>
+#include <vector>
+#include <map>
 #include <fstream>
 #include "Person.h"
 #include "Friend.h"
@@ -7,19 +9,24 @@
 class Addressbook
 {
 private:
-	std::list <Friend> Fbook;
-	std::list <Colleague> Cbook;
-	std::list <Person* > book;
+	std::vector <Friend> Fbook;
+	std::vector <Colleague> Cbook;
+	//std::list <Person* > book;
+	std::map<string, Person*> book;
+	std::map<string, Person*>::iterator bookIter;
 	string pathF;
 	string pathC;
 	unsigned int mainMenu();
 	void selectAction(unsigned int);
 public:
 	Addressbook();
-	void start();
+	//void start();
+	void loadBook();
+	void loadFriends();
+	void loadColleagues();
 	void showAll();
-	void addPerson();
-	void addPerson(Person*);
+	void addPerson(char);
+	void addPerson(Friend);
 	//void addFriend(Friend);
 	//void addColleague(Colleague);
 	void delPerson();
