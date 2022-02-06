@@ -8,7 +8,7 @@ Addressbook::Addressbook()
 }
 void Addressbook::start()
 {		
-		while (true)
+	while (true)
 	{
 		unsigned int flag = mainMenu();
 		if (flag == 0)
@@ -16,8 +16,6 @@ void Addressbook::start()
 		else
 			selectAction(flag);
 	}
-	
-
 }
 unsigned int Addressbook::mainMenu()
 {
@@ -108,7 +106,6 @@ void Addressbook::addPerson(char f)
 		cin >> name >> lastName >> phone >> position >> department >> organization;
 		addPerson(createPerson(name, lastName, phone, position, department, organization));		
 	}
-	
 }
 
 void Addressbook::saveBook()
