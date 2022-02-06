@@ -11,3 +11,4 @@ static Person* createPerson(string name, string lastName, string phone,	string p
 {
 	return new Colleague(name, lastName, phone, position, department, organization);
 }
+

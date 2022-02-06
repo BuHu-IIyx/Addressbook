@@ -139,28 +139,28 @@ void Addressbook::loadBook()
 {
 	std::ifstream finF;
 	finF.open(pathF);
-	Friend fr;
+	Friend* fr = new Friend();
 	if (!finF.is_open())
 	{
 		cout << "Ошибка открытия файла FriendBook.txt";
 	}
 	else
 	{
-		while (finF.read((char*)&fr, sizeof(Friend)))
+		while (finF.read((char*)fr, sizeof(Friend)))
 		{
-			addPerson(&fr);
+			addPerson(fr->getCopy(*fr));
 		}
 		cout << "Файл FriendBook.txt загружен." << endl;
 	}
 	finF.close();
 	
 	std::ifstream finC(pathC);
-	Colleague c;
+	Colleague* c = new Colleague();
 	if (finC.is_open())
 	{
-		while (finC.read((char*)&c, sizeof(Colleague)))
+		while (finC.read((char*)c, sizeof(Colleague)))
 		{			
-			addPerson(&c);
+			addPerson(c->getCopy(*c));
 		}
 		cout << "Файл ColleagueBook.txt загружен." << endl;
 	}

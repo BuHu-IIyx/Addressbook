@@ -20,6 +20,10 @@ string Friend::getPerson()
     ss << Person::getPerson() << " (" << nickname << ")";
     return ss.str();
 }
+Person* Friend::getCopy(Friend f)
+{
+    return new Friend(f.name, f.lastName, f.phone, f.nickname);
+}
 char Friend::getStatus()
 {
     return status;

@@ -31,3 +31,7 @@ string Colleague::getPerson()
     ss << Person::getPerson() << " (" << organization << ", " << department << ", " << position << ")";
     return ss.str();
 }
+Person* Colleague::getCopy(Colleague c)
+{
+    return new Colleague(c.name, c.lastName, c.phone, c.position, c.department, c.organization);
+}
