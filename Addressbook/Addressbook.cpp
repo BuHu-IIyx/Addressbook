@@ -17,38 +17,7 @@ void Addressbook::start()
 			selectAction(flag);
 	}
 	
-	//std::ifstream finF;
-	//finF.open(pathF);
-	//Friend* fr = new Friend;
-	//if (!finF.is_open())
-	//{
-	//	cout << "Ошибка открытия файла FriendBook.txt";
-	//}
-	//else
-	//{
-	//	while (finF.read((char*)fr, sizeof(Friend)))
-	//	{
-	//		addPerson(*fr);
-	//	}
-	//	cout << "Файл FriendBook.txt загружен." << endl;
-	//}
-	//finF.close();
-	//
-	//std::ifstream finC(pathC);
-	//Colleague c;
-	//if (finC.is_open())
-	//{
-	//	while (finC.read((char*)&c, sizeof(Colleague)))
-	//	{
-	//		Cbook.push_back(c);
-	//	}
-	//	cout << "Файл ColleagueBook.txt загружен." << endl;
-	//}
-	//else
-	//{
-	//	cout << "Ошибка открытия файла ColleagueBook.txt";
-	//}
-	//finC.close();
+
 }
 unsigned int Addressbook::mainMenu()
 {
@@ -165,4 +134,39 @@ void Addressbook::saveBook()
 	}
 	foutF.close();
 	foutC.close();
+}
+void Addressbook::loadBook()
+{
+	std::ifstream finF;
+	finF.open(pathF);
+	Friend fr;
+	if (!finF.is_open())
+	{
+		cout << "Ошибка открытия файла FriendBook.txt";
+	}
+	else
+	{
+		while (finF.read((char*)&fr, sizeof(Friend)))
+		{
+			addPerson(&fr);
+		}
+		cout << "Файл FriendBook.txt загружен." << endl;
+	}
+	finF.close();
+	
+	std::ifstream finC(pathC);
+	Colleague c;
+	if (finC.is_open())
+	{
+		while (finC.read((char*)&c, sizeof(Colleague)))
+		{			
+			addPerson(&c);
+		}
+		cout << "Файл ColleagueBook.txt загружен." << endl;
+	}
+	else
+	{
+		cout << "Ошибка открытия файла ColleagueBook.txt";
+	}
+	finC.close();
 }
